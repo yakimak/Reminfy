@@ -1,0 +1,10 @@
+image: gitpod/workspace-java-17
+
+tasks:
+  - init: |
+      cd backend && 
+      mvn compile -q
+  - command: |
+      docker-compose up -d &&
+      cd backend &&
+      mvn spring-boot:runS
